@@ -20,17 +20,21 @@ is_distributed = num_gpus > 1
 
 
 parser = argparse.ArgumentParser(description='Deep stereo using adaptive cost volume.')
-parser.add_argument('--root_path', type=str, help='path to root directory.')
-parser.add_argument('--train_list', type=str, help='train scene list.', default='./dataloader/datalist/dtu/train.txt')
+# parser.add_argument('--root_path', type=str, help='path to root directory.')
+parser.add_argument('--root_path', type=str, default="D:/dataset/dtu_training/dtu_training/mvs_training/dtu", help='path to root directory.')
+parser.add_argument('--train_list', type=str, help='train scene list.', default='./dataloader/datalist/dtu/train1.txt')
 parser.add_argument('--val_list', type=str, help='val scene list.', default='./dataloader/datalist/dtu/val.txt')
-parser.add_argument('--save_path', type=str, help='path to save checkpoints.')
+# parser.add_argument('--save_path', type=str, help='path to save checkpoints.')
+parser.add_argument('--save_path', default="./training/1/", type=str, help='path to save checkpoints.')
 
-parser.add_argument('--epochs', type=int, default=60)
+parser.add_argument('--epochs', type=int, default=1)
 parser.add_argument('--lr', type=float, default=0.0016)
-parser.add_argument('--lr_idx', type=str, default="10,12,14:0.5")
+# parser.add_argument('--lr_idx', type=str, default="10,12,14:0.5")
+parser.add_argument('--lr_idx', type=str, default="20,30,40,50:0.625")
 parser.add_argument('--loss_weights', type=str, default="0.5,1.0,2.0")
 parser.add_argument('--wd', type=float, default=0.0, help='weight decay')
-parser.add_argument('--batch_size', type=int, default=1)
+# parser.add_argument('--batch_size', type=int)
+parser.add_argument('--batch_size',default=1, type=int)
 
 parser.add_argument('--num_views', type=int, help='num of candidate views', default=2)
 parser.add_argument('--lamb', type=float, help='the interval coefficient.', default=1.5)
