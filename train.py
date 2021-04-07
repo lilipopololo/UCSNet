@@ -27,7 +27,7 @@ parser.add_argument('--val_list', type=str, help='val scene list.', default='./d
 # parser.add_argument('--save_path', type=str, help='path to save checkpoints.')
 parser.add_argument('--save_path', default="./training/2/", type=str, help='path to save checkpoints.')
 
-parser.add_argument('--epochs', type=int, default=2)
+parser.add_argument('--epochs', type=int, default=1)
 parser.add_argument('--lr', type=float, default=0.0016)
 # parser.add_argument('--lr_idx', type=str, default="10,12,14:0.5")
 parser.add_argument('--lr_idx', type=str, default="20,30,40,50:0.625")
