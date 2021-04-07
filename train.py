@@ -21,7 +21,7 @@ is_distributed = num_gpus > 1
 
 parser = argparse.ArgumentParser(description='Deep stereo using adaptive cost volume.')
 # parser.add_argument('--root_path', type=str, help='path to root directory.')
-parser.add_argument('--root_path', type=str, default="D:/dataset/dtu_training/dtu_training/mvs_training/dtu", help='path to root directory.')
+parser.add_argument('--root_path', type=str, default="E:/dataset/dtu_training/dtu_training/mvs_training/dtu", help='path to root directory.')
 parser.add_argument('--train_list', type=str, help='train scene list.', default='./dataloader/datalist/dtu/train1.txt')
 parser.add_argument('--val_list', type=str, help='val scene list.', default='./dataloader/datalist/dtu/val.txt')
 # parser.add_argument('--save_path', type=str, help='path to save checkpoints.')
